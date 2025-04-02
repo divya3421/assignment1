@@ -3,8 +3,7 @@ pipeline {
   stages {
   stage('Clone Repository') {
     steps {
-        git
-'https://github.com/divya3421/assignment1.git'
+        git 'https://github.com/divya3421/assignment1.git'
           }
     }
     stage('Deploy HTML') {
