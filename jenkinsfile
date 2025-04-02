@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+  stage('Clone Repository') {
+    steps {
+        git
+'https://github.com/divya3421/assignment1.git'
+          }
+    }
+    stage('Deploy HTML') {
+        steps {
+            sh ' ' '
+            sudo mkdir -p /var/www/html
+            sudo cp hello.html /var/www/html/hello.html
+            sudo systemctl restart apache2 ' ' '
+            }
+        }
+  }
+}
