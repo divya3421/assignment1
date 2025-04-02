@@ -8,10 +8,9 @@ pipeline {
     }
     stage('Deploy HTML') {
         steps {
-            sh ' ' '
-            sudo mkdir -p /var/www/html
-            sudo cp hello.html /var/www/html/hello.html
-            sudo systemctl restart apache2 ' ' '
+            sh 'sudo mkdir -p /var/www/html'
+            sh 'sudo cp hello.html /var/www/html/hello.html'
+            sh 'sudo systemctl restart apache2 '
             }
         }
   }
