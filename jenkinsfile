@@ -8,6 +8,7 @@ pipeline {
     }
     stage('Deploy HTML') {
         steps {
+            sh 'git --version'
             sh 'sudo mkdir -p /var/www/html'
             sh 'sudo cp hello.html /var/www/html/hello.html'
             sh 'sudo systemctl restart apache2 '
